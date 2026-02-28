@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f2f5fb;
+  --foreground: #1f2933;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* Hide scrollbars while keeping scroll functionality */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari and Opera */
+}
+
+/* Custom ultra-thin scrollbar for cart */
+.scrollbar-thin {
+  scrollbar-width: thin;  /* Firefox */
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 1px !important;  /* Chrome, Safari and Opera - Extremely thin */
+  height: 1px !important;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.3) !important;  /* Very light gray */
+  border-radius: 1px !important;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.6) !important;  /* Slightly darker on hover */
+}
+
+/* Hide Next.js Dev Tools Badge and Panels */
+[data-next-badge-root],
+[data-next-badge],
+div[style*="--size: 36px"],
+#next-logo,
+[data-nextjs-dev-tools-button],
+iframe[title*="Next.js"],
+div[id*="__next"],
+.__next-dev-tools,
+/* Hide browser dev tools panel overlay */
+body > div[style*="position: fixed"][style*="z-index"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}

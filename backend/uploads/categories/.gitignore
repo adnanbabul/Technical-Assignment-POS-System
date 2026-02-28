@@ -1,0 +1,10 @@
+# Ignore all files in this directory
+*
+
+# Except for seed/placeholder category images and documentation
+!.gitignore
+!README.md
+!chicken.png
+!seafood.png
+!pasta.png
+!rice-bowl.png
